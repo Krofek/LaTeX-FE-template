@@ -1,4 +1,7 @@
+% nastavitve dokumenta
 \documentclass[10pt,a4paper]{article}
+
+% dodatni paketki
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[slovene]{babel}
@@ -9,7 +12,14 @@
 \usepackage{makeidx}
 \usepackage{hyperref}
 \usepackage{eurosym}
+\usepackage{enumitem}
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{accsupp}
+\usepackage{listings}
+\usepackage{color}
 
+% hyperlink setup
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -18,16 +28,11 @@
     urlcolor=black
 }
 
-\usepackage{enumitem}
-\usepackage{color}
-\usepackage{textcomp}
+% barva za listing paket
 \definecolor{listinggray}{gray}{0.9}
 \definecolor{lbcolor}{rgb}{0.95,0.95,0.95}
 
-\usepackage{accsupp}
-\usepackage{listings}
-\usepackage{color}
-
+% nastavitve za listing (da ne pride do jezikovnih konfliktov)
 \lstset{inputencoding=utf8}
 \lstset{extendedchars=true}
 \lstset{
@@ -43,6 +48,8 @@
     {Š}{{\v{S}}}1
     {Ž}{{\v{Z}}}1
 }
+
+% vizualne nastavitve za posamezne programske jezike pri uporabi listings
 \lstset{
 	backgroundcolor=\color{lbcolor},
 	tabsize=4,
@@ -65,13 +72,16 @@
         stringstyle=\color[rgb]{0.627,0.126,0.941},       
 }
 
+
+% začetek dokumenta
 \begin{document}
 
+% naslovna stran
 \input{title}
 
+% kazala
 \tableofcontents
-
 \listoffigures
 
-
+% konec :)
 \end{document}
